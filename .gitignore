@@ -1,0 +1,3 @@
+/data/*
+!/data/ops.json
+!/data/whitelist.json
