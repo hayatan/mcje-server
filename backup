@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+zip_dir="/tmp/buckup/"
+zip_filename="buckup-$(date -u "+%Y%m%d_%H%M%S").zip"
+zip_path="${zip_dir}${zip_filename}"
+data_dir="/data/"
+
+if [ ! -f ~/.dropbox_uploader ]; then
+    dropbox_uploader.sh
+fi
+
+mkdir -p ${zip_dir}
+zip -r ${zip_path} ${data_dir}
+
+dropbox_uploader.sh upload ${zip_path} ${zip_filename}
+rm -rf ${zip_dir}
