@@ -9,7 +9,6 @@ services:
     environment:
       - EULA=TRUE
       - TYPE=FORGE
-      - VERSION=1.16.4
       - WHITE_LIST=TRUE
     restart: always
     ports:
