@@ -14,7 +14,7 @@ docker-compose up --build -d
 `/data` ディレクトリ以下を Dropbox にバックアップします。
 
 ```
-docker-compose exec backup
+docker-compose exec minecraft backup
 ```
 
 初回はDropboxアプリのキーなどを聞かれるので事前に用意しておいてください。
